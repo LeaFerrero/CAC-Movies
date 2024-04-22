@@ -1,0 +1,8 @@
+@import url(./general-style.css);
+
+.header{
+    background-color: var(--colorBackrgoundHeader);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}

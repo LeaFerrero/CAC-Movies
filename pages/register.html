@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/header-style.css">
+    <link rel="stylesheet" href="../assets/css/main-style.css">
+    <link rel="stylesheet" href="../assets/css/footer-style.css">
+    <link rel="shortcut icon" href="../assets/media/icons/favicon.ico" type="image/x-icon">
+    <title>CAC-Movies: Registrarse</title>
+</head>
+<body class="registerBody">
+    <header class="header">
+        <nav class="headerNavigation">
+            <ul>
+                <li><a href="./trends.html">Tendecias</a></li>
+                <li><a href="./register.html">Registrarse</a></li>
+                <li><a href="./login.html">Iniciar Sesión</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="registerSection">
+            <form class="registerForm">
+                <h2>Registrarse</h2>
+                <div class="registerName">
+                    <input class="registerNameInput" type="text" name="name" id="name" placeholder="Nombre" required>
+                </div>
+
+                <div class="registerLastName">
+                    <input class="registerLastNameInput" type="text" name="lastName" id="lastName" placeholder="Apellido" required>
+                </div>
+
+                <div class="registerEmail">
+                    <input class="registerEmailInput" type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div class="registerPassword">
+                    <input class="registerPasswordlInput" type="text" name="password" id="password" placeholder="Contraseña" required>
+                </div>
+                
+                <div class="registerBirthDatel">
+                    <input class="registerBirthDatelInput" type="date" name="birthDate" id="birthDate" placeholder="Fecha de nacimiento">
+                </div>
+
+                <div class="registerCountry">
+                    <select class="registerCountrySelect" name="country" id="country" required>
+                        <option value="">País</option>
+                        <option value="AR">Argentina</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BR">Brasil</option>
+                        <option value="CH">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="PY">Paraguay</option>
+                        <option value="PE">Perú</option>
+                        <option value="UY">Uruguay</option>
+                        <option value="VE">Venezuela</option>
+                    </select>
+                </div>
+
+                <div class="registerTerms">
+                    <input class="registerTermsInput" type="checkbox" name="terms" id="terms">
+                    <label class="registerTermsLabel" for="terms">Terminos y condiciones</label>
+                </div>
+
+                <div class="registerButton">
+                    <input class="registerButtonInput" type="submit" value="Registrarse">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footerNavigationSection">
+            <nav class="footerNavigation">
+                <ul>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="socialMediaSection">
+            <h3>Nuestras redes</h3>
+            <ul class="socialMediaList">
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer nofollow">
+                    <img src="../assets/media/icons/facebook.webp" alt="facebook icon">
+                </a></li>
+                <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer nofollow">
+                    <img src="../assets/media/icons/twitter.webp" alt="twitter icon">
+                </a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer nofollow">
+                    <img src="../assets/media/icons/instagram.webp" alt="instagram icon">
+                </a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

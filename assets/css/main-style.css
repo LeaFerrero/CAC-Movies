@@ -1,0 +1,346 @@
+@import url(./general-style.css);
+
+h1, h2 {
+    font-family: var(--fontHeader);
+}
+
+hr {
+    border: 1px solid var(--colorHorizontalRule);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.indexBody {
+    background-color: var(--colorBackground);
+}
+
+.homeSection {
+    background: linear-gradient(to top, #000000bd, #000000bd), url(../media/images/backgrounds/index_header_background.webp);
+    height: 90vh;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .homeTextContainer{
+        text-align: center;
+        padding: 3rem;
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3rem);
+            margin-bottom: 0.2em;
+        }
+
+        p {
+            font-family: var(--fontRegularText);
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            margin-bottom: 2em;
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            margin-bottom: 1em;
+        }
+
+    }
+
+    .registerButton {
+        background-color: var(--colorBackgroundButton);
+        color: var(--colorText);
+        font-family: var(--fontButton);
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        border: 2px solid var(--colorBorder);
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        transition: all 0.5s;
+        &:hover {
+            background-color: var(--colorBackgroundButtonHover);
+        }
+    }
+   
+}
+
+.searchSection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    .searchForm {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        
+        .searchInputText {
+            border: 3px solid var(--colorBorder);
+            border-radius: 25px;
+            background-color: var(--colorBackgroundInputText);
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            height: 50px;
+            margin: 1rem 1rem;
+            outline: none;
+            padding: 0px 20px;
+            width: 30rem;
+            transition: all 0.3s;
+            &:focus{
+                border-color: var(--colorBorderInputFocus);
+            }
+        }
+
+        .searchInputButton {
+            background-color: var(--colorBackgroundButton);
+            height: 50px;
+            margin: 1rem 1rem;
+            border-radius: 25px;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            border: 2px solid var(--colorBorder);
+            width: 30rem;
+            transition: all 0.5s;
+            &:hover {
+                background-color: var(--colorBackgroundButtonHover);
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
+
+.trendsSection {
+    margin: 5rem 0;
+    padding: 0 5rem;
+    text-align: center;
+  
+    h2 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        margin: 4rem 0;
+    }
+    
+    .trendsGalery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 4rem;
+        
+        .trendsImageContainer{
+            height: 20rem;
+            border-radius: 5px;
+            transition: all 0.5s;
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+                object-fit: cover;
+            }
+            &:hover{
+                box-shadow: 0px 0px 20px 5px var(--colorShadow);
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .trendsButtonsContainer{
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        .prevButton, .nextButton {
+            background-color: var(--colorBackgroundButton);
+            color: var(--colorText);
+            font-family: var(--fontButton);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            border: 2px solid var(--colorBorder);
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin-top: 1rem;
+            transition: all 0.5s;
+            &:hover {
+                background-color: var(--colorBackgroundButtonHover);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.acclaimedSection {
+    margin: 5rem 0;
+    padding: 0 5rem;
+    text-align: center;
+  
+    h2 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        margin: 4rem 0;
+    }
+    
+    .acclaimedGalery{
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+        padding: 2rem;
+
+        .acclaimedImageContainer{
+            height: 20rem;
+            flex-shrink: 0;
+            border-radius: 5px;
+            transition: all 0.5s;
+            
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+            
+            &:hover{
+                box-shadow: 0px 0px 20px 5px var(--colorShadow);
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+.registerBody {
+    background: linear-gradient(to top, #000000bd, #000000bd), url(../media/images/backgrounds/register_background.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.registerSection {
+    height: 90vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    h2{
+        margin-bottom: 1.5rem;
+    }
+        
+    .registerForm {
+        width: 100%;
+        background-color: var(--colorBackground);
+        border-radius: 5px;
+        padding: 1rem;
+    
+        .registerNameInput, .registerLastNameInput, .registerEmailInput, .registerPasswordlInput, .registerConfirmPasswordlInput, .registerBirthDatelInput, .registerCountrySelect{
+            width: 100%;
+            font-family: var(--fontRegularText);
+            margin-bottom: 1rem;
+            height: 2rem;
+            padding: 0 0.5rem;
+            font-size: clamp(0.5rem, 5vw, 1rem);
+            border-radius: 25px;
+            border: 3px solid var(--colorBorder);
+            background-color: #333333;
+            outline: none;
+            transition: all 0.3s;
+            &:focus {
+                border-color: var(--colorBorderInputFocus);
+            }
+        }
+
+        .registerButtonInput {
+            width: 100%;
+            background-color: var(--colorBackgroundButton);
+            color: var(--colorText);
+            font-family: var(--fontButton);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border: 2px solid var(--colorBorder);
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            transition: all 0.5s;
+            &:hover {
+                background-color: var(--colorBackgroundButtonHover);
+                cursor: pointer;
+            }
+        }
+
+        .registerTerms{
+            font-family: var(--fontRegularText);
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            .registerTermsLabel{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+
+.loginBody {
+    background: linear-gradient(to top, #000000bd, #000000bd), url(../media/images/backgrounds/register_background.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.loginSection {
+    height: 90vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    h2{
+        margin-bottom: 1.5rem;
+    }
+        
+    .loginForm {
+        width: 100%;
+        background-color: var(--colorBackground);
+        border-radius: 5px;
+        padding: 1rem;
+
+        .loginEmailInput, .loginPasswordlInput{
+            width: 100%;
+            font-family: var(--fontRegularText);
+            margin-bottom: 1rem;
+            height: 2rem;
+            padding: 0 0.5rem;
+            font-size: clamp(0.5rem, 5vw, 1rem);
+            border-radius: 25px;
+            border: 3px solid var(--colorBorder);
+            background-color: var(--colorBackgroundInputText);
+            outline: none;
+            transition: all 0.3s;
+            &:focus {
+                border-color: var(--colorBorderInputFocus);
+            }
+        }
+
+        .loginButtonInput {
+            width: 100%;
+            background-color: var(--colorBackgroundButton);
+            color: var(--colorText);
+            font-family: var(--fontButton);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border: 2px solid var(--colorBorder);
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            transition: all 0.5s;
+            &:hover {
+                background-color: var(--colorBackgroundButtonHover);
+                cursor: pointer;
+            }
+        }
+
+        .loginRegisterLink{
+            padding-top: 1rem;
+            font-family: var(--fontRegularText);
+        }
+    }
+}
