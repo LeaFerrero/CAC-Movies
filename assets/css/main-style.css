@@ -4,15 +4,15 @@ h1, h2 {
     font-family: var(--fontHeader);
 }
 
-hr {
-    border: 1px solid var(--colorHorizontalRule);
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 40px;
-}
-
 .indexBody {
     background-color: var(--colorBackground);
+}
+
+.mainHorizontalRule {
+    border: 1px solid var(--colorMainHorizontalRule);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
 }
 
 .homeSection {

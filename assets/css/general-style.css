@@ -34,7 +34,8 @@
   --colorBackgroundInputText: #333333;
   --colorBorder: #ffff;
   --colorBorderInputFocus: #6063c3;
-  --colorHorizontalRule: #4145b5;
+  --colorFooterHorizontalRule: #cfcbcb;
+  --colorMainHorizontalRule: #4145b5;
   --colorShadow: rgba(255,255,255,0.5);
   --colorText: #cfcbcb;
     
@@ -51,4 +52,5 @@
   box-sizing: border-box;
   color: var(--colorText);
   text-decoration: none;
+  scroll-behavior: smooth;
 }
