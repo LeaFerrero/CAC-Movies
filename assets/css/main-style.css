@@ -344,3 +344,48 @@ h1, h2 {
         }
     }
 }
+
+.detailBody {
+    background-color: var(--colorBackground);
+}
+
+.detailSection{
+    padding: 5rem;
+    
+    .detailContainer{
+        width:75%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        column-gap: 60px;
+
+        .detailImageContainer{
+            height: 20rem;
+            border-radius: 5px;
+            transition: all 0.5s;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+        .detailTextContainer{
+            h1{
+                font-size: 2.2rem;
+            }
+
+            h2{
+                margin-top:3rem;
+            }
+
+            .detailCreditsContainer{
+                margin-top: 3rem;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
