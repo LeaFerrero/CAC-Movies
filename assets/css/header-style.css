@@ -1,3 +1,6 @@
+
+/* Estilos para el Header del sitio */
+
 @import url(./general-style.css);
 
 .header{
@@ -51,6 +54,10 @@
              
             &:hover::before {
                 transform: scaleX(1);
+            }
+
+            a{
+                color: var(--colorText);
             }
         }
     }

@@ -1,3 +1,6 @@
+
+/* Estilos para todos los mains del sitio */
+
 @import url(./general-style.css);
 
 h1, h2, h3 {
@@ -7,6 +10,8 @@ h1, h2, h3 {
 p {
     font-family: var(--fontRegularText);
 }
+
+/* Index */
 
 .indexBody {
     background-color: var(--colorBackground);
@@ -212,6 +217,8 @@ p {
     }
 }
 
+/* Pagina de registro*/
+
 .registerBody {
     background: linear-gradient(to top, #000000bd, #000000bd), url(../media/images/backgrounds/register_background.webp);
     background-size: cover;
@@ -220,7 +227,7 @@ p {
 
 .registerSection {
     height: 90vh;
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -283,6 +290,17 @@ p {
     }
 }
 
+/* Mediaqueris para la seccion de registro */
+
+@media (min-width: 768px) {
+    .registerSection {
+        width: 30%;
+    }
+}
+
+
+
+/* Pagina de login */
 
 .loginBody {
     background: linear-gradient(to top, #000000bd, #000000bd), url(../media/images/backgrounds/register_background.webp);
@@ -292,7 +310,7 @@ p {
 
 .loginSection {
     height: 90vh;
-    width: 30%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -368,10 +386,19 @@ p {
             &:hover::before {
                 transform: scaleX(1);
             }
-            
         }
     }
 }
+
+/* Mediaqueris para la seccion de login */
+
+@media (min-width: 768px) {
+    .loginSection {
+        width: 30%;
+    }
+}
+
+/* Pagina de detalle */
 
 .detailBody {
     background-color: var(--colorBackground);
@@ -464,6 +491,8 @@ p {
         }
     }
 }
+
+/* Mediaqueris para la pagina de detalle */
 
 @media (min-width: 768px) {
     .detailSection {
