@@ -223,132 +223,70 @@ p {
 
 /* Pagina de registro*/
 
-.registerBody {
+.registerBody, .loginBody {
     background: linear-gradient(to top, #000000bd, #000000bd), url(../media/images/backgrounds/register_background.webp);
-    background-size: cover;
-    background-position: center;
+    background-size: fill;
+    
 }
 
-.registerSection {
-    height: 90vh;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.registerSection, .loginSection {
     margin: 0 auto;
 
-    h2{
-        margin-bottom: 1.5rem;
+    h2 {
+        margin-bottom: 1rem;
     }
         
-    .registerForm {
+    .registerForm, .loginForm {
+        margin: 5rem 0;
         width: 100%;
         background-color: var(--colorBackground);
         border-radius: 5px;
         padding: 1rem;
+
+        .registerName, .registerLastName, .registerEmail, .registerPassword, .registerBirthDate, .registerCountry, .loginEmail, .loginPassword {
+            height: 100%;
+        }
     
-        .registerNameInput, .registerLastNameInput, .registerEmailInput, .registerPasswordlInput, .registerConfirmPasswordlInput, .registerBirthDatelInput, .registerCountrySelect{
+        .registerNameInput, .registerLastNameInput, .registerEmailInput, .registerPasswordlInput, .registerBirthDatelInput, .registerCountrySelect, .loginEmailInput, .loginPasswordInput {
             width: 100%;
             font-family: var(--fontRegularText);
-            margin-bottom: 1rem;
+            margin-top: 1rem;
             height: 2rem;
-            padding: 0 0.5rem;
+            padding: 0 1rem;
             font-size: clamp(0.5rem, 5vw, 1rem);
             border-radius: 25px;
             border: 3px solid var(--colorBorder);
-            background-color: #333333;
+            background-color: var(--colorBackgroundInput);
             outline: none;
             transition: all 0.3s;
             &:focus {
                 border-color: var(--colorBorderInputFocus);
-            }
-        }
-
-        .registerButtonInput {
-            width: 100%;
-            background-color: var(--colorBackgroundButton);
-            color: var(--colorText);
-            font-family: var(--fontButton);
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            border: 2px solid var(--colorBorder);
-            font-size: clamp(1rem, 3vw, 1.2rem);
-            transition: all 0.5s;
-            &:hover {
-                background-color: var(--colorBackgroundButtonHover);
-                cursor: pointer;
             }
         }
 
         .registerTerms{
             font-family: var(--fontRegularText);
             font-size: 0.8rem;
-            display: flex;
+            margin-top: 1rem;        
             align-items: center;
             margin-bottom: 1rem;
-            .registerTermsLabel{
-                margin-left: 20px;
+            
+            .registerTermsLabel {
+                margin-left: 0.2rem;
             }
         }
-    }
-}
 
-/* Mediaqueris para la seccion de registro */
-
-@media (min-width: 768px) {
-    .registerSection {
-        width: 30%;
-    }
-}
-
-
-
-/* Pagina de login */
-
-.loginBody {
-    background: linear-gradient(to top, #000000bd, #000000bd), url(../media/images/backgrounds/register_background.webp);
-    background-size: cover;
-    background-position: center;
-}
-
-.loginSection {
-    height: 90vh;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    h2{
-        margin-bottom: 1.5rem;
-    }
-        
-    .loginForm {
-        width: 100%;
-        background-color: var(--colorBackground);
-        border-radius: 5px;
-        padding: 1rem;
-
-        .loginEmailInput, .loginPasswordlInput{
-            width: 100%;
+        .errorText {
+            color: var(--colorErrorText);
+            font-size: clamp(0.5rem, 5vw, 0.8rem);
             font-family: var(--fontRegularText);
-            margin-bottom: 1rem;
-            height: 2rem;
-            padding: 0 0.5rem;
-            font-size: clamp(0.5rem, 5vw, 1rem);
-            border-radius: 25px;
-            border: 3px solid var(--colorBorder);
-            background-color: var(--colorBackgroundInputText);
-            outline: none;
-            transition: all 0.3s;
-            &:focus {
-                border-color: var(--colorBorderInputFocus);
-            }
+            margin-top: 0.3rem;
+            padding: 0 1.2rem;
         }
 
-        .loginButtonInput {
+        .registerButtonInput, .loginButtonInput {
             width: 100%;
+            margin-top: 1rem;
             background-color: var(--colorBackgroundButton);
             color: var(--colorText);
             font-family: var(--fontButton);
@@ -394,10 +332,10 @@ p {
     }
 }
 
-/* Mediaqueris para la seccion de login */
+/* Mediaqueris para la seccion de registro y de logeo */
 
 @media (min-width: 768px) {
-    .loginSection {
+    .registerSection, .loginSection {
         width: 30%;
     }
 }

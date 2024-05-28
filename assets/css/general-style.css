@@ -26,14 +26,15 @@
 /*Root*/
 :root{
   /* Colores */
-  --colorBackground: #111213;
+  --colorBackground: #16161d;
   --colorBackgroundButton: #1c1f83;
   --colorBackgroundFooter: #1c1f83;
   --colorBackrgoundHeader: #1c1f83;    
   --colorBackgroundButtonHover: #4145b5;
-  --colorBackgroundInputText: #333333;
+  --colorBackgroundInput: #333333;
   --colorBorder: #ffff;
   --colorBorderInputFocus: #6063c3;
+  --colorErrorText: #d03939;
   --colorFooterHorizontalRule: #cfcbcb;
   --colorMainHorizontalRule: #4145b5;
   --colorShadow: rgba(255,255,255,0.5);

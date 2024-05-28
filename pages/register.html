@@ -27,26 +27,31 @@
 
     <main class="main">
         <section class="registerSection">
-            <form class="registerForm">
+            <form class="registerForm" id="registerForm">
                 <h2>Registrarse</h2>
                 <div class="registerName">
                     <input class="registerNameInput" type="text" name="name" id="name" placeholder="Nombre" required>
+                    <div class="errorText" id="errorName"></div>
                 </div>
 
                 <div class="registerLastName">
                     <input class="registerLastNameInput" type="text" name="lastName" id="lastName" placeholder="Apellido" required>
+                    <div class="errorText" id="errorLastName"></div>
                 </div>
 
                 <div class="registerEmail">
                     <input class="registerEmailInput" type="email" name="email" id="email" placeholder="Email" required>
+                    <div class="errorText" id="errorEmail"></div>
                 </div>
 
                 <div class="registerPassword">
                     <input class="registerPasswordlInput" type="text" name="password" id="password" placeholder="Contraseña" required>
+                    <div class="errorText" id="errorPassword"></div>
                 </div>
                 
-                <div class="registerBirthDatel">
+                <div class="registerBirthDate">
                     <input class="registerBirthDatelInput" type="date" name="birthDate" id="birthDate" placeholder="Fecha de nacimiento">
+                    <div class="errorText" id="errorBirthDate"></div>
                 </div>
 
                 <div class="registerCountry">
@@ -63,11 +68,13 @@
                         <option value="UY">Uruguay</option>
                         <option value="VE">Venezuela</option>
                     </select>
+                    <div class="errorText" id="errorCountry"></div>
                 </div>
 
                 <div class="registerTerms">
                     <input class="registerTermsInput" type="checkbox" name="terms" id="terms">
                     <label class="registerTermsLabel" for="terms">Terminos y condiciones</label>
+                    <div class="errorText" id="errorTerms"></div>
                 </div>
 
                 <div class="registerButton">
@@ -106,5 +113,6 @@
             </nav>
         </section>
     </footer>
+    <script type="module" src="../assets/js/register-validation.js"></script>
 </body>
 </html>
