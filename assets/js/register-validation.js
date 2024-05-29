@@ -63,19 +63,4 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
         }
     });
-
-    document.querySelectorAll(".form-control").forEach((input) => {
-        input.addEventListener("keydown", (event) => {
-            if (event.key === "Tab" || event.key === "Enter") {
-                event.preventDefault();
-                validateRegisterFields();
-            }
-        });
-    });
-    
 });
-
-/*
-
-
-*/
