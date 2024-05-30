@@ -62,7 +62,7 @@ const renderMovies = (movies) => {
 
 /**
  * Añade un manejador de eventos al documento que se ejecuta cuando el contenido se ha cargado completamente.
- * El manejador de eventos se encarga de recuperar y renderizar las películas populares.
+ * El manejador de eventos se encarga de recuperar y renderizar las películas.
  */
 document.addEventListener("DOMContentLoaded", async () => {
     const movies = await fetchMovies();
