@@ -28,10 +28,8 @@ function createMovieCard(movie) {
  * @returns {Promise<Object[]>} Una promesa que resuelve en un array de objetos de películas.
  */
 async function fetchMovies() {
-    const API_SERVER = "https://www.omdbapi.com/?apikey=e4edead7&s=rings&page=1&type=movie";
-    
     try {
-        const response = await fetch(API_SERVER);
+        const response = await fetch("https://www.omdbapi.com/?apikey=e4edead7&s=rings&page=1&type=movie");
         const data = await response.json();
         const movies = data.Search;
         return movies;
