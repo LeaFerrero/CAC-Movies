@@ -12,7 +12,7 @@ function createMovieCard(movie) {
     cardLink.href = "../pages/detail.html";
 
     const cardImage = document.createElement("img");
-    cardImage.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
+    cardImage.src = movie.Poster;
     cardImage.alt = movie.title;
     cardImage.loading = "lazy";
 
@@ -28,17 +28,14 @@ function createMovieCard(movie) {
  * @returns {Promise<Object[]>} Una promesa que resuelve en un array de objetos de películas.
  */
 async function fetchMovies() {
-    const API_SERVER = "https://api.themoviedb.org/3";
-    const options = {
-        method: "GET",
-        accept: "application/json",
-        Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYTJjYTAwZDYxZWIzOTEyYjZlNzc4MDA4YWQ3ZmNjOCIsInN1YiI6IjYyODJmNmYwMTQ5NTY1MDA2NmI1NjlhYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.4MJSPDJhhpbHHJyNYBtH_uCZh4o0e3xGhZpcBIDy-Y8"
-    };
+    const API_SERVER = "http://www.omdbapi.com/?apikey=e4edead7&s=rings&page=1&type=movie";
     
     try {
-        const response = await fetch(`${API_SERVER}/movie/popular?page=1`, options);
+        const response = await fetch(API_SERVER);
         const data = await response.json();
-        const movies = data.results;
+        console.log(data);
+        const movies = data.Search;
+        console.log(movies);
         return movies;
     } catch (error) {
         console.error(error);
@@ -52,14 +49,17 @@ async function fetchMovies() {
  * @param {Object[]} movies - Un array de objetos de películas.
  */
 const renderMovies = (movies) => {
-    if (movies && movies.length > 0) {
+    if (movies && movies.length > 0) 
+    {
         const acclaimedGalery = document.getElementById("acclaimedGalery");
         acclaimedGalery.innerHTML = "";
         movies.forEach(movie => {
             const movieCard = createMovieCard(movie);
             acclaimedGalery.appendChild(movieCard);
         });
-    } else {
+    } 
+    else 
+    {
         console.error("No hay películas para renderizar");
     }
 }
