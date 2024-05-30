@@ -23,19 +23,17 @@ function createMovieCard(movie) {
 }
 
 /**
- * Recupera las películas populares desde la API.
+ * Recupera las películas desde la API.
  *
  * @returns {Promise<Object[]>} Una promesa que resuelve en un array de objetos de películas.
  */
 async function fetchMovies() {
-    const API_SERVER = "http://www.omdbapi.com/?apikey=e4edead7&s=rings&page=1&type=movie";
+    const API_SERVER = "https://www.omdbapi.com/?apikey=e4edead7&s=rings&page=1&type=movie";
     
     try {
         const response = await fetch(API_SERVER);
         const data = await response.json();
-        console.log(data);
         const movies = data.Search;
-        console.log(movies);
         return movies;
     } catch (error) {
         console.error(error);
