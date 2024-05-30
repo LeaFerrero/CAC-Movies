@@ -13,7 +13,7 @@ function createMovieCard(movie) {
 
     const cardImage = document.createElement("img");
     cardImage.src = movie.Poster;
-    cardImage.alt = movie.title;
+    cardImage.alt = movie.Title;
     cardImage.loading = "lazy";
 
     cardLink.appendChild(cardImage);
