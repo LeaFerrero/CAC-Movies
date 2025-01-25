@@ -33,25 +33,23 @@ export function isValidEmail(email) {
 }
 
 /**
- * Verifica si la fecha de nacimiento es válida.
- * Una fecha de nacimiento es válida si no está vacía.
+ * Verifica si una cadena está vacía o solo contiene espacios en blanco.
  *
- * @param {string} date - La fecha de nacimiento a validar.
- * @returns {boolean} Devuelve true si la fecha de nacimiento es válida, de lo contrario, devuelve false.
+ * @param {string} string - La cadena a validar.
+ * @returns {boolean} Devuelve true si la cadena está vacía, de lo contrario, false.
  */
-export function isValidBirthDate(date) {
-    return date !== "";
+export function isEmpty(string) {
+    return string.trim().length === 0;
 }
 
 /**
- * Verifica si el país seleccionado es válido.
- * Un país es válido si no está vacío.
+ * Verifica si una cadena representa un valor numérico.
  *
- * @param {string} country - El país a validar.
- * @returns {boolean} Devuelve true si el país es válido, de lo contrario, devuelve false.
+ * @param {string} string - La cadena a validar.
+ * @returns {boolean} Devuelve true si la cadena representa un número, de lo contrario, false.
  */
-export function isValidCountry(country) {
-    return country !== "";
+export function isNumeric(string) {
+    return !isNaN(Number(string));
 }
 
 /**

@@ -35,12 +35,12 @@ const validateRegisterFields = () => {
         isValid = false;
     }
     
-    if (!validation.isValidBirthDate(birthDate)) {
+    if (validation.isEmpty(birthDate)) {
         validation.displayErrorMessage("errorBirthDate", "Debes seleccionar una fecha de nacimiento.");
         isValid = false;
     }
     
-    if (!validation.isValidCountry(country)) {
+    if (validation.isEmpty(country)) {
         validation.displayErrorMessage("errorCountry", "Debes seleccionar un país.");
         isValid = false;
     }
