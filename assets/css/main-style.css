@@ -222,22 +222,22 @@ body {
     }
 }
 
-/* Pagina de registro y logeo*/
+/* Pagina de registro, logeo y administrador */
 
-.registerBody, .loginBody {
+.registerBody, .loginBody, .adminBody {
     background: linear-gradient(to top, #000000bd, #000000bd), url(../media/images/backgrounds/register_background.webp);
     background-size: fill;
     
 }
 
-.registerSection, .loginSection {
+.registerSection, .loginSection, .adminSection {
     margin: 0 auto;
 
     h2 {
         margin-bottom: 1rem;
     }
         
-    .registerForm, .loginForm {
+    .registerForm, .loginForm, .adminForm {
         margin: 5rem 0;
         width: 100%;
         background-color: var(--colorBackground);
@@ -248,7 +248,7 @@ body {
             height: 100%;
         }
     
-        .registerNameInput, .registerLastNameInput, .registerEmailInput, .registerPasswordlInput, .registerBirthDatelInput, .registerCountrySelect, .loginEmailInput, .loginPasswordInput {
+        .inputText, .inputEmail, .inputPassword, .inputDate, .inputSelect {
             width: 100%;
             font-family: var(--fontRegularText);
             margin-top: 1rem;
@@ -289,7 +289,7 @@ body {
             padding: 0 1.2rem;
         }
 
-        .registerButtonInput, .loginButtonInput {
+        .inputSubmit {
             width: 100%;
             margin-top: 1rem;
             background-color: var(--colorBackgroundButton);
@@ -337,10 +337,10 @@ body {
     }
 }
 
-/* Mediaqueris para la seccion de registro y de logeo */
+/* Mediaqueris para la seccion de registro, logeo y administrador */
 
 @media (min-width: 768px) {
-    .registerSection, .loginSection {
+    .registerSection, .loginSection, .adminSection {
         width: 30%;
     }
 }
